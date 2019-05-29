@@ -1,0 +1,165 @@
+2019-05-29 06:44:38,584 p=3027 u=root |   [WARNING]: Unable to parse /home/aravind/localhost as an inventory source
+
+2019-05-29 06:44:38,584 p=3027 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-05-29 06:44:38,586 p=3027 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2019-05-29 06:44:39,268 p=3027 u=root |  PLAY [test] ******************************************************************************************************************************
+2019-05-29 06:44:39,269 p=3027 u=root |  skipping: no hosts matched
+2019-05-29 06:44:39,269 p=3027 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-05-29 06:52:24,219 p=3081 u=root |   [WARNING]: Unable to parse /home/aravind/master as an inventory source
+
+2019-05-29 06:52:24,219 p=3081 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-05-29 06:52:24,221 p=3081 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2019-05-29 06:52:24,578 p=3081 u=root |  PLAY [test] ******************************************************************************************************************************
+2019-05-29 06:52:24,578 p=3081 u=root |  skipping: no hosts matched
+2019-05-29 06:52:24,579 p=3081 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-05-29 06:52:32,213 p=3088 u=root |  ERROR! the playbook: master could not be found
+2019-05-29 06:52:46,123 p=3092 u=root |  ERROR! the playbook: localhost could not be found
+2019-05-29 06:52:58,980 p=3097 u=root |   [WARNING]: Unable to parse /home/aravind/localhost as an inventory source
+
+2019-05-29 06:52:58,980 p=3097 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-05-29 06:52:58,982 p=3097 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2019-05-29 06:52:59,341 p=3097 u=root |  PLAY [test] ******************************************************************************************************************************
+2019-05-29 06:52:59,341 p=3097 u=root |  skipping: no hosts matched
+2019-05-29 06:52:59,342 p=3097 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-05-29 06:53:18,702 p=3104 u=root |   [WARNING]: Unable to parse /home/aravind/all as an inventory source
+
+2019-05-29 06:53:18,702 p=3104 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-05-29 06:53:18,704 p=3104 u=root |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2019-05-29 06:53:19,066 p=3104 u=root |  PLAY [test] ******************************************************************************************************************************
+2019-05-29 06:53:19,066 p=3104 u=root |  skipping: no hosts matched
+2019-05-29 06:53:19,066 p=3104 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-05-29 06:53:29,698 p=3112 u=root |  PLAY [test] ******************************************************************************************************************************
+2019-05-29 06:53:29,710 p=3112 u=root |  TASK [Gathering Facts] *******************************************************************************************************************
+2019-05-29 06:53:30,866 p=3112 u=root |  ok: [slave1]
+2019-05-29 06:53:30,885 p=3112 u=root |  TASK [git check] *************************************************************************************************************************
+2019-05-29 06:53:31,344 p=3112 u=root |  changed: [slave1]
+2019-05-29 06:53:31,364 p=3112 u=root |  TASK [debug] *****************************************************************************************************************************
+2019-05-29 06:53:31,383 p=3112 u=root |  ok: [slave1] => {
+    "output": {
+        "changed": true, 
+        "cmd": [
+            "git", 
+            "--version"
+        ], 
+        "delta": "0:00:00.019201", 
+        "end": "2019-05-29 06:53:31.306160", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2019-05-29 06:53:31.286959", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "git version 2.14.5", 
+        "stdout_lines": [
+            "git version 2.14.5"
+        ]
+    }
+}
+2019-05-29 06:53:31,386 p=3112 u=root |  PLAY RECAP *******************************************************************************************************************************
+2019-05-29 06:53:31,386 p=3112 u=root |  slave1                     : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-05-29 15:20:22,537 p=3102 u=root |  PLAY [test] **************************************************************************************************************************
+2019-05-29 15:20:22,550 p=3102 u=root |  TASK [Gathering Facts] ***************************************************************************************************************
+2019-05-29 15:20:22,562 p=3102 u=root |  fatal: [slave1]: FAILED! => {"msg": "the connection plugin 'heck' was not found"}
+2019-05-29 15:20:22,562 p=3102 u=root |  PLAY RECAP ***************************************************************************************************************************
+2019-05-29 15:20:22,563 p=3102 u=root |  slave1                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-05-29 15:21:32,981 p=3362 u=root |  PLAY [test] **************************************************************************************************************************
+2019-05-29 15:21:32,989 p=3362 u=root |  TASK [Gathering Facts] ***************************************************************************************************************
+2019-05-29 15:21:33,001 p=3362 u=root |  fatal: [slave1]: FAILED! => {"msg": "the connection plugin 'heck' was not found"}
+2019-05-29 15:21:33,002 p=3362 u=root |  PLAY RECAP ***************************************************************************************************************************
+2019-05-29 15:21:33,003 p=3362 u=root |  slave1                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-05-29 15:21:38,168 p=3372 u=root |  ansible-playbook 2.8.0
+  config file = /home/aravind/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Mar 18 2019, 18:38:44) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2019-05-29 15:21:38,168 p=3372 u=root |  Using /home/aravind/ansible.cfg as config file
+2019-05-29 15:21:38,511 p=3372 u=root |  PLAYBOOK: ci.yml *********************************************************************************************************************
+2019-05-29 15:21:38,512 p=3372 u=root |  1 plays in ci.yml
+2019-05-29 15:21:38,538 p=3372 u=root |  PLAY [test] **************************************************************************************************************************
+2019-05-29 15:21:38,547 p=3372 u=root |  TASK [Gathering Facts] ***************************************************************************************************************
+2019-05-29 15:21:38,548 p=3372 u=root |  task path: /home/aravind/ci.yml:2
+2019-05-29 15:21:38,560 p=3372 u=root |  fatal: [slave1]: FAILED! => {"msg": "the connection plugin 'heck' was not found"}
+2019-05-29 15:21:38,561 p=3372 u=root |  PLAY RECAP ***************************************************************************************************************************
+2019-05-29 15:21:38,561 p=3372 u=root |  slave1                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-05-29 15:22:24,421 p=3386 u=root |  ansible-playbook 2.8.0
+  config file = /home/aravind/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Mar 18 2019, 18:38:44) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2019-05-29 15:22:24,421 p=3386 u=root |  Using /home/aravind/ansible.cfg as config file
+2019-05-29 15:22:24,706 p=3386 u=root |  ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/aravind/ci.yml': line 9, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    register: output
+  - debug:
+    ^ here
+
+2019-05-29 15:23:23,609 p=3394 u=root |  ansible-playbook 2.8.0
+  config file = /home/aravind/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Mar 18 2019, 18:38:44) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2019-05-29 15:23:23,609 p=3394 u=root |  Using /home/aravind/ansible.cfg as config file
+2019-05-29 15:23:23,890 p=3394 u=root |  ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/aravind/ci.yml': line 9, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    register: output
+  - debug:
+    ^ here
+
+2019-05-29 15:24:08,248 p=3403 u=root |  ansible-playbook 2.8.0
+  config file = /home/aravind/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Mar 18 2019, 18:38:44) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2019-05-29 15:24:08,249 p=3403 u=root |  Using /home/aravind/ansible.cfg as config file
+2019-05-29 15:24:08,585 p=3403 u=root |  PLAYBOOK: ci.yml *********************************************************************************************************************
+2019-05-29 15:24:08,585 p=3403 u=root |  1 plays in ci.yml
+2019-05-29 15:24:08,612 p=3403 u=root |  PLAY [test] **************************************************************************************************************************
+2019-05-29 15:24:08,621 p=3403 u=root |  TASK [Gathering Facts] ***************************************************************************************************************
+2019-05-29 15:24:08,621 p=3403 u=root |  task path: /home/aravind/ci.yml:2
+2019-05-29 15:24:08,633 p=3403 u=root |  fatal: [slave1]: FAILED! => {"msg": "the connection plugin 'heck' was not found"}
+2019-05-29 15:24:08,634 p=3403 u=root |  PLAY RECAP ***************************************************************************************************************************
+2019-05-29 15:24:08,634 p=3403 u=root |  slave1                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-05-29 15:24:14,710 p=3413 u=root |  ansible-playbook 2.8.0
+  config file = /home/aravind/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.16 (default, Mar 18 2019, 18:38:44) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2019-05-29 15:24:14,710 p=3413 u=root |  Using /home/aravind/ansible.cfg as config file
+2019-05-29 15:24:14,710 p=3413 u=root |  setting up inventory plugins
+2019-05-29 15:24:14,719 p=3413 u=root |  host_list declined parsing /home/aravind/hosts as it did not pass it's verify_file() method
+2019-05-29 15:24:14,719 p=3413 u=root |  script declined parsing /home/aravind/hosts as it did not pass it's verify_file() method
+2019-05-29 15:24:14,719 p=3413 u=root |  auto declined parsing /home/aravind/hosts as it did not pass it's verify_file() method
+2019-05-29 15:24:14,723 p=3413 u=root |  Parsed /home/aravind/hosts inventory source with ini plugin
+2019-05-29 15:24:14,996 p=3413 u=root |  Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/dist-packages/ansible/plugins/callback/default.pyc
+2019-05-29 15:24:15,052 p=3413 u=root |  PLAYBOOK: ci.yml *********************************************************************************************************************
+2019-05-29 15:24:15,053 p=3413 u=root |  1 plays in ci.yml
+2019-05-29 15:24:15,080 p=3413 u=root |  PLAY [test] **************************************************************************************************************************
+2019-05-29 15:24:15,089 p=3413 u=root |  TASK [Gathering Facts] ***************************************************************************************************************
+2019-05-29 15:24:15,089 p=3413 u=root |  task path: /home/aravind/ci.yml:2
+2019-05-29 15:24:15,101 p=3413 u=root |  fatal: [slave1]: FAILED! => {
+    "msg": "the connection plugin 'heck' was not found"
+}
+2019-05-29 15:24:15,102 p=3413 u=root |  PLAY RECAP ***************************************************************************************************************************
+2019-05-29 15:24:15,102 p=3413 u=root |  slave1                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
