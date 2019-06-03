@@ -13,8 +13,11 @@
     docker_container:
       name: mydata
       image: nginx
-      command: sudo /etc/init.d/nginx start
+#      command: sudo /etc/init.d/nginx start
+      command: service httpd restart
       volumes:
         - /var/lib/jenkins/ci/index.html
       exposed_ports:
-        - 80
+        - "80"
+      ports:
+        - 9323:80
