@@ -1,18 +1,15 @@
 ---
-- name: test
-  hosts: all
-  with_items:
-    - test_image
-  tasks:
-  - name: git check
-    command: git --version
-    register: output
-  - debug: 
-       var: output
+-  name: test
+   hosts: all
+   tasks:
+   - name: git check
+     command: git --version
+     register: output
+   - debug:
+        var: output
 
-  - name: Create a data container
-    command: docker build -t {{item}}:v1 .
-    shell: docker run -itd {{item}}:v1 -p 80:9234 /bin/bash
-    register: output
-  - debug:
-       var: output
+   - name: docker
+     command: docker build -t test:v1 .
+     command: docker run -itd test:v1 -p 80:9234 /bin/bash
+   - debug:
+        var: output
