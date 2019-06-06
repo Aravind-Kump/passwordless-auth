@@ -11,5 +11,7 @@
    - name: docker
      command: sudo docker build -t test:v1 .
      command: sudo docker run -itd -p 80:9234 test:v1 
+     become: yes
+     become_user: root
    - debug:
         var: output
