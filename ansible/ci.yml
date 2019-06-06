@@ -2,6 +2,7 @@
 - name: test
   hosts: all
   vars:
+    - test_image
   tasks:
   - name: git check
     command: git --version
@@ -10,14 +11,8 @@
        var: output
 
   - name: Create a data container
-    docker_container:
-      name: mydata
-      image: nginx
-#      command: sudo /etc/init.d/nginx start
-      command: service httpd restart
-      volumes:
-        - /var/lib/jenkins/ci/index.html
-      exposed_ports:
-        - "80"
-      ports:
-        - 9323:80
+    command: docker build -t {{item}}:v1 .
+    shell: docker run -itd {{item}}:v1 -p 80:9234 /bin/bash
+    register: output
+  - debug:
+       var: output

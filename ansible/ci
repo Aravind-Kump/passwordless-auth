@@ -1,0 +1,28 @@
+---
+- name: test
+  hosts: all
+  vars:
+  tasks:
+  - name: git check
+    command: git --version
+    register: output
+  - debug: 
+       var: output
+
+  - name: Create a data container
+    docker_container:
+      name: mydata
+      image: nginx
+#      command: sudo /etc/init.d/nginx start
+      command: service httpd start
+      volumes:
+        - /var/lib/jenkins/ci/index.html
+      exposed_ports:
+        - "80"
+      ports:
+        - 9323:80  
+    docker_network:
+      name: docker0
+      connected:
+        - mydata
+      appends: yes
