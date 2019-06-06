@@ -10,6 +10,7 @@
 
    - name: docker
      command: docker build -t test:v1 .
-     command: docker run -itd test:v1 -p 80:9234 /bin/bash
+     register: result
+     command: docker run -itd -p 80:9234 test:v1 
    - debug:
         var: output
