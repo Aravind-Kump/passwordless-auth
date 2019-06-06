@@ -9,8 +9,8 @@
         var: output
 
    - name: docker
-     command: docker build -t test:v1 .
+     command:sudo docker build -t test:v1 .
      register: result
-     command: docker run -itd -p 80:9234 test:v1 
+     command: sudo docker run -itd -p 80:9234 test:v1 
    - debug:
         var: output
