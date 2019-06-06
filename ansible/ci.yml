@@ -10,7 +10,6 @@
 
    - name: docker
      command:sudo docker build -t test:v1 .
-     register: output
      command: sudo docker run -itd -p 80:9234 test:v1 
    - debug:
         var: output
