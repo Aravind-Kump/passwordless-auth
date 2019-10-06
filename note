@@ -1,0 +1,3 @@
+once the config is update perform the below for reflecting the changes done
+
+service sshd reload
